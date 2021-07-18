@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	discrdlog "gologgerdiscord"
+	discrdlog "github.com/fachryansyah/go-logger-discord"
 )
 
 func main() {
