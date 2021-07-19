@@ -10,20 +10,27 @@ $ go get github.com/fachryansyah/go-logger-discord
 # Usage
 Simply setting your auth config for initial logger
 ```go
-log := Init(AuthConfig{
-	Token: "your token",
-	Type:  "Bot",
-}, "your channel id")
-```
-call logger inside your middleware or on error trace
-```go
-log.Error(
-    "a message",
-    "a title of error",
-    "a description of error",
-    "url refrence"
+package main
+
+import (
+    dscrdlog "github.com/fachryansyah/go-logger-discord"
 )
+
+func main() {
+    log := dscrdlog.Init(dscrdlog.AuthConfig{
+        Token: "your token",
+        Type:  "Bot",
+    }, "your channel id")
+
+    log.Error(
+        "a message",
+        "a title of error",
+        "a description of error",
+        "url refrence"
+    )
+}
 ```
+
 # API
 | Name            | Description               |Return |
 | ----------------|---------------------------|-------|
