@@ -9,9 +9,9 @@ import (
 func TestLogError(t *testing.T) {
 
 	l := Init(AuthConfig{
-		Token: "ODY2NDE3MTA3ODUwNDkzOTgy.YPSPzw.C7K0R2YVXHHsZq2TS4NAtgASV08",
+		Token: "your token",
 		Type:  "Bot",
-	}, "866422241733509170")
+	}, "your channel id")
 
 	err := l.Error(
 		"500 Internal server error (http://localhost:1337/test/error)",
