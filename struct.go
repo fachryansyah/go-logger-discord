@@ -1,19 +1,24 @@
 package gologgerdiscord
 
+type Logger struct {
+	Auth      AuthConfig
+	ChannelID string
+}
+
 type AuthConfig struct {
 	Token string
-	Type  string // Bot token, OAuth2
+	Type  string // Bot token or OAuth2
 }
 
 type Message struct {
-	Content string
-	Embeds  []*EmbedObject
+	Content string         `json:"content"`
+	Embeds  []*EmbedObject `json:"embeds"`
 }
 
 type EmbedObject struct {
-	Title       string
-	Type        string
-	Description string
-	URL         string
-	Color       int
+	Title       string `json:"title"`
+	Type        string `json:"type"`
+	Description string `json:"description"`
+	URL         string `json:"url"`
+	Color       int    `json:"color"`
 }
