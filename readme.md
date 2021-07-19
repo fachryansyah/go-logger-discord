@@ -1,5 +1,6 @@
 # Go logger Discord
 A golang logger send over discord channel
+![alt text](https://github.com/fachryansyah/go-logger-discord/ss.png)
 
 # Instalation
 ```bash
